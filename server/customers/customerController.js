@@ -77,8 +77,7 @@ module.exports = {
           plain: false
         });
         if (created) {
-          users[ord.username] = ord;
-          var token = jwt.encode(users[ord.username], 'barHawksecret444');
+          var token = jwt.encode(user, 'barHawksecret444');
           res.json({
             currentUser: ord,
             token: token
